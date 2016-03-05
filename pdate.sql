@@ -135,11 +135,11 @@ END;;
 DELIMITER ;
 
 -- ----------------------------
--- Function structure for `pdate`
+-- Function structure for `jdate`
 -- ----------------------------
-DROP FUNCTION IF EXISTS `pdate`;
+DROP FUNCTION IF EXISTS `jdate`;
 DELIMITER ;;
-CREATE DEFINER=`root`@`localhost` FUNCTION `pdate`(`gdate` datetime) RETURNS char(100) CHARSET utf8
+CREATE DEFINER=`root`@`localhost` FUNCTION `jdate`(`gdate` datetime) RETURNS char(100) CHARSET utf8
 BEGIN
 # Copyright (C) 2009-2012 Mohammad Saleh Souzanchi
 # WebLog : www.saleh.soozanchi.ir
@@ -201,11 +201,11 @@ END;;
 DELIMITER ;
 
 -- ----------------------------
--- Function structure for `PMONTH`
+-- Function structure for `jmonth`
 -- ----------------------------
-DROP FUNCTION IF EXISTS `PMONTH`;
+DROP FUNCTION IF EXISTS `jmonth`;
 DELIMITER ;;
-CREATE DEFINER=`root`@`localhost` FUNCTION `PMONTH`(`gdate` datetime) RETURNS char(100) CHARSET utf8
+CREATE DEFINER=`root`@`localhost` FUNCTION `jmonth`(`gdate` datetime) RETURNS char(100) CHARSET utf8
 BEGIN
 # Copyright (C) 2009-2012 Mohammad Saleh Souzanchi
 # WebLog : www.saleh.soozanchi.ir
@@ -261,17 +261,17 @@ END;;
 DELIMITER ;
 
 -- ----------------------------
--- Function structure for `pmonthname`
+-- Function structure for `jmonthname`
 -- ----------------------------
-DROP FUNCTION IF EXISTS `pmonthname`;
+DROP FUNCTION IF EXISTS `jmonthname`;
 DELIMITER ;;
-CREATE DEFINER=`root`@`localhost` FUNCTION `pmonthname`(`gdate` datetime) RETURNS varchar(100) CHARSET utf8
+CREATE DEFINER=`root`@`localhost` FUNCTION `jmonthname`(`gdate` datetime) RETURNS varchar(100) CHARSET utf8
 BEGIN
 # Copyright (C) 2009-2012 Mohammad Saleh Souzanchi
 # WebLog : www.saleh.soozanchi.ir
 # Version V1.0.1
 
-	CASE PMONTH(gdate)
+	CASE jmonth(gdate)
 		WHEN 1 THEN RETURN 'فروردين';
 		WHEN 2 THEN RETURN 'ارديبهشت';
 		WHEN 3 THEN	RETURN 'خرداد';
@@ -290,11 +290,11 @@ END;;
 DELIMITER ;
 
 -- ----------------------------
--- Function structure for `pyear`
+-- Function structure for `jyear`
 -- ----------------------------
-DROP FUNCTION IF EXISTS `pyear`;
+DROP FUNCTION IF EXISTS `jyear`;
 DELIMITER ;;
-CREATE DEFINER=`root`@`localhost` FUNCTION `pyear`(`gdate` datetime) RETURNS char(100) CHARSET utf8
+CREATE DEFINER=`root`@`localhost` FUNCTION `jyear`(`gdate` datetime) RETURNS char(100) CHARSET utf8
 BEGIN
 # Copyright (C) 2009-2012 Mohammad Saleh Souzanchi
 # WebLog : www.saleh.soozanchi.ir
@@ -350,11 +350,11 @@ END;;
 DELIMITER ;
 
 -- ----------------------------
--- Function structure for `pday`
+-- Function structure for `jday`
 -- ----------------------------
-DROP FUNCTION IF EXISTS `pday`;
+DROP FUNCTION IF EXISTS `jday`;
 DELIMITER ;;
-CREATE DEFINER=`root`@`localhost` FUNCTION `pday`(`gdate` datetime) RETURNS char(100) CHARSET utf8
+CREATE DEFINER=`root`@`localhost` FUNCTION `jday`(`gdate` datetime) RETURNS char(100) CHARSET utf8
 BEGIN
 # Copyright (C) 2011-2012 Mohammad Saleh Souzanchi, Mehran . M . Spitman
 # WebLog : www.saleh.soozanchi.ir, spitman.azdaa.com
