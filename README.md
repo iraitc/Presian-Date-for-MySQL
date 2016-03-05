@@ -40,7 +40,7 @@ Takes georgian datetime as input and returns jalali date in text format.
 #### jmonth(datetime)
 Takes georgian datetime as input and returns jalali month number in text format.
 
-#### jmonthNAME(datetime)
+#### jmonthname(datetime)
 Takes georgian datetime as input and returns jalali month name in text format.
 
 #### jyear(datetime)
