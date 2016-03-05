@@ -1,4 +1,4 @@
-# [MySQL] pDate
+# [MySQL] jdate
   
 
 Content:
@@ -13,7 +13,7 @@ Content:
 
 ## About
 
-[MySQL] pDate is a Gregorian / Jalali date converter functions for MySQL.
+[MySQL] jdate is a Gregorian / Jalali date converter functions for MySQL.
 
 ## Requirements
 
@@ -28,25 +28,25 @@ Content:
 
 ## Installation
 
-Import __pDate.sql__ in your database.
+Import __jdate.sql__ in your database.
 
 ## Usage
 
 You can use these six functions, which are provided on a set:
 
-#### PDATE(datetime)
+#### jdate(datetime)
 Takes georgian datetime as input and returns jalali date in text format.
 
-#### PMONTH(datetime)
+#### jmonth(datetime)
 Takes georgian datetime as input and returns jalali month number in text format.
 
-#### PMONTHNAME(datetime)
+#### jmonthNAME(datetime)
 Takes georgian datetime as input and returns jalali month name in text format.
 
-#### PYEAR(datetime)
+#### jyear(datetime)
 Takes georgian datetime as input and returns jalali year number in text format.
 
-#### PDAY(datetime)
+#### jday(datetime)
 Takes georgian datetime as input and returns jalali day number in text format.
 
 #### GDATE(year smallint, month smallint, day smallint)
@@ -62,10 +62,10 @@ _You can not enter Jalali year in short format! for example `'90/03/03'` shows t
 Here is simple line of sql code which you can use it to test the set of functions:
 
 ```
-SELECT	pdate(NOW()),
-		pyear('2009-09-22'),
-        pmonth('2009-09-22'),
-        pmonthname(NOW()),
+SELECT	jdate(NOW()),
+		jyear('2009-09-22'),
+        jmonth('2009-09-22'),
+        jmonthname(NOW()),
         gdate(1366,9,19),
         gdatestr('1366/9/19');
 ```
